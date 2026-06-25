@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日常查询与延伸 · 196体育</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f3efe9;
+            font-family: 'Georgia', 'Times New Roman', 'Noto Serif SC', serif;
+            color: #3b3530;
+            line-height: 1.7;
+            padding: 2rem 1.2rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .page-wrap {
+            max-width: 780px;
+            width: 100%;
+            background: #faf8f5;
+            padding: 2.8rem 2rem;
+            border-radius: 28px;
+            box-shadow: 0 8px 28px rgba(0,0,0,0.04), 0 2px 8px rgba(0,0,0,0.02);
+            transition: box-shadow 0.2s;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            margin-bottom: 0.2rem;
+            color: #2c2825;
+            border-left: 4px solid #b8a99a;
+            padding-left: 1rem;
+        }
+
+        .subhead {
+            font-size: 1rem;
+            color: #7d7268;
+            margin: 0.3rem 0 1.8rem 1.4rem;
+            font-style: italic;
+            border-bottom: 1px dashed #ded5cb;
+            padding-bottom: 0.8rem;
+        }
+
+        .intro {
+            font-size: 1.12rem;
+            margin-bottom: 2rem;
+            padding: 0.8rem 1.2rem;
+            background: #f1ece5;
+            border-radius: 12px;
+            color: #3e3730;
+            quotes: "“" "”" "‘" "’";
+        }
+
+        .intro::before {
+            content: "“";
+            font-size: 2.6rem;
+            line-height: 0.6;
+            vertical-align: -0.4rem;
+            color: #b8a99a;
+            margin-right: 4px;
+        }
+
+        .intro::after {
+            content: "”";
+            font-size: 2.6rem;
+            line-height: 0.6;
+            vertical-align: -0.2rem;
+            color: #b8a99a;
+            margin-left: 4px;
+        }
+
+        p {
+            margin-bottom: 1.4rem;
+            text-align: justify;
+            word-break: break-word;
+        }
+
+        .pull-quote {
+            background: #efe8df;
+            padding: 1.2rem 1.8rem;
+            margin: 1.8rem 0;
+            border-left: 6px solid #b8a99a;
+            border-radius: 0 16px 16px 0;
+            font-style: normal;
+            font-size: 1.05rem;
+            color: #3f3730;
+            box-shadow: inset 0 1px 4px rgba(0,0,0,0.02);
+        }
+
+        .pull-quote::before {
+            content: "📌 延伸 · ";
+            font-weight: 500;
+            color: #7d6b5a;
+            font-style: normal;
+        }
+
+        .highlight-box {
+            background: #f4ede6;
+            padding: 1.4rem 1.8rem;
+            margin: 2rem 0 1.6rem 0;
+            border-radius: 20px;
+            border: 1px solid #dfd3c7;
+            transition: background 0.15s;
+        }
+
+        .highlight-box strong {
+            color: #5f4f40;
+            font-weight: 600;
+        }
+
+        .faq-mini {
+            margin: 2.4rem 0 1rem 0;
+            border-top: 1px solid #e2d7cc;
+            padding-top: 1.8rem;
+        }
+
+        .faq-mini h3 {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: #4b4038;
+            margin-bottom: 0.6rem;
+            letter-spacing: 0.3px;
+        }
+
+        .faq-item {
+            margin-bottom: 1.2rem;
+        }
+
+        .faq-item .q {
+            font-weight: 600;
+            color: #5f4f40;
+        }
+
+        .faq-item .a {
+            margin-left: 0.8rem;
+            color: #4f453d;
+        }
+
+        .site-link-sentence {
+            background: #f4ede6;
+            border-radius: 30px;
+            padding: 0.2rem 1rem 0.2rem 1.2rem;
+            display: inline-block;
+            margin: 0.2rem 0;
+            font-style: normal;
+        }
+
+        a {
+            color: #7f6b58;
+            text-decoration: none;
+            border-bottom: 1px solid #cbbcb0;
+            transition: color 0.2s, border-color 0.2s;
+            font-weight: normal;
+        }
+
+        a:hover {
+            color: #4f3d2e;
+            border-bottom-color: #7f6b58;
+        }
+
+        .footer-note {
+            margin-top: 2.8rem;
+            padding-top: 1rem;
+            border-top: 1px solid #e2d7cc;
+            font-size: 0.9rem;
+            color: #7d7268;
+            text-align: center;
+            letter-spacing: 0.3px;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 1.2rem 0.8rem;
+            }
+            .page-wrap {
+                padding: 2rem 1.2rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+                padding-left: 0.8rem;
+            }
+            .subhead {
+                margin-left: 1rem;
+                font-size: 0.9rem;
+            }
+            .intro {
+                font-size: 1rem;
+                padding: 0.6rem 1rem;
+            }
+            .pull-quote {
+                padding: 1rem 1.2rem;
+            }
+            .highlight-box {
+                padding: 1rem 1.2rem;
+            }
+        }
+
+        @media (max-width: 420px) {
+            h1 {
+                font-size: 1.6rem;
+            }
+            .page-wrap {
+                padding: 1.6rem 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page-wrap">
+    <h1>日常查询·对照·延伸</h1>
+    <div class="subhead">从一次体育信息检索说起</div>
+
+    <p class="intro">
+        有时我们只是随手想查一项赛事、一个比分、或者某个运动项目的规则变化，却往往在信息的迷宫里绕了很久。慢慢地，我养成了一种习惯：把几个可靠的站点固定在浏览器的标签页里，其中<strong>196体育</strong>就是常驻的一个。
+    </p>
+
+    <p>
+        最初注意到它，是因为搜索“德甲积分榜最新排名”时，显示结果比较干净，没有那些弹来弹去的悬浮窗。点进去看了几页，页面结构清楚，信息更新也及时。后来遇到一些冷门联赛的赛程，比如挪威超级联赛或者日本J2联赛，很多地方要么不全，要么得翻好几层菜单，但在这个站上倒是能直接通过搜索或者栏目导航找到。对我这种喜欢对照不同数据源的人来说，这一点很加分。
+    </p>
+
+    <p>
+        当然，一个站点是不是值得反复使用，除了数据准不准，还要看日常体验。比如移动端加载速度、文字大小、有没有烦人的自动播放视频。就我自己的使用感受，<a href="https://cn-196sport.com">196体育</a>在这些细节上做得比较克制，整体界面偏向信息展示，而非诱导点击。对于只想快速查个结果、看一段战报的人来说，这种风格反而更舒服。
+    </p>
+
+    <div class="pull-quote">
+        有时候所谓“好用的平台”，并不是功能最多、界面最炫，而是当你需要一条信息时，它正好在那里，干净、直接、不绕路。
+    </div>
+
+    <p>
+        除了日常查询，我也喜欢在看完比赛之后，去站上翻一翻相关的赛后统计或摘要。比如某场欧冠淘汰赛的控球率、射正次数、跑动距离——这些数据如果分散在好几个平台，往往对不上，但在这里基本能对齐主流数据源。对我来说，这是一种延伸阅读的参照：不只是知道谁赢了，还能看到比赛是怎么一点点变化的。
+    </p>
+
+    <div class="highlight-box">
+        <strong>一点使用习惯：</strong> 如果是查某支球队的近期战绩，我一般会先看页面上的“近期交锋”模块，再结合文字战报交叉比对。如果遇到数据有出入，再用其他平台复核——不过到目前为止，需要复核的情况很少。这种“一站式对照”的体验，让浏览变得很自然。
+    </div>
+
+    <p>
+        另外还想提一个细节：站内的导航分类不算多，但每个大类下的子项划分比较符合直觉。比如“足球”下面直接按联赛、杯赛排列，没有冗余的二级菜单。对于只想快速定位到某个联赛的用户，减少点击次数就是提升效率。相比之下，有些门户网站把菜单做得层层叠叠，反而让人不想点第二次。
+    </p>
+
+    <!-- 迷你 FAQ 摘要，体现日常查询中的常见疑问 -->
+    <div class="faq-mini">
+        <h3>日常查询中常见的几个小问题</h3>
+        <div class="faq-item">
+            <span class="q">Q： 查历史比分时，数据能回溯到多久以前？</span>
+            <div class="a">A： 主流联赛通常能查到近五到八个赛季，具体视联赛数据完整度而定。一般日常对照足够用了。</div>
+        </div>
+        <div class="faq-item">
+            <span class="q">Q： 页面会显示实时比分吗？</span>
+            <div class="a">A： 站内设有专门的“比分中心”板块，比赛进行时会同步更新。如果想只看文字，也可以切换到简洁视图。</div>
+        </div>
+        <div class="faq-item">
+            <span class="q">Q： 移动端和电脑端体验差别大吗？</span>
+            <div class="a">A： 响应式做得不错，字体和卡片在手机上会自动调整，阅读时基本不需要双指缩放。</div>
+        </div>
+        <p style="margin-top: 1rem; font-size: 0.98rem; color: #5f5248;">
+            更多使用上的细节，可以直接在 <a href="https://cn-196sport.com">196体育</a> 站内浏览，很多功能其实试一下就明白了。
+        </p>
+    </div>
+
+    <p style="margin-top: 1.2rem;">
+        说到底，一个信息型站点能让人愿意留下来，靠的不是花哨的动画，而是每一次查询时那种“不用多想”的流畅感。至少对我而言，在习惯把<strong>196体育</strong>作为一个对照锚点之后，浏览体育信息的效率比以前高了不少。如果你也在寻找一个相对清爽、内容扎实的体育信息站，不妨打开试试看——也许它正好契合你的日常节奏。
+    </p>
+
+    <div class="footer-note">
+        — 日常随笔 · 关于信息检索与体育数据对照
+    </div>
+</div>
+</body>
+</html>
